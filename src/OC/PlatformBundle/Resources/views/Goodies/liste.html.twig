@@ -1,10 +1,4 @@
-
-{# src/OC/PlatformBundle/Resources/views/Default/acceuil.html.twig #}
-
-<TITLE>Paritek</TITLE>
-
 <html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
          
@@ -115,27 +109,20 @@
 </ul>
 </div>
 </nav>
-
-<div id="formulaire" style="position:relative">
-		<form method="post" action="{{ path("goodies_ajout")}}" enctype="multipart/form-data">
-			<div class="form-group">
-				<label>Titre</label>
-					<input type="text" name="title" class="form-control" id="titreform" >
-				</div>
- 
-			<div class="form-group">
-				<label>Contenu</label>
-					<textarea type="text" name="contenu" class="form-control" id="contenu"></textarea>
-			</div>
-			
-			<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
-			<label>Quelle image pour illustrer votre article</label>? <br/><input type="file" name="fichier" id="fichier" />
-			<br/>
-
-			<input type="submit" value="Envoyer" />
+	
+   <div id="cont-liste" style="position:relative">
+   <form method="post" action="{{path("goodies_form")}}" enctype="multipart/form-data" >
+			<input style="border: 1px solid  #CECECE; border-radius: 5px; margin-left:80%; margin-top:2%" type="submit" value="Ajouter un article"/>
 		</form>
+		 {% for project in projects %}
+		 <div style="background:transparent;" class="cont-photo-liste">
+ <p style="float: left;"><img alt="" src ="{{ asset('images/upload/' ~ project.photo) }}" style="width:250px;
+height:200px; border-bottom-left-radius:15px; border-top-left-radius:15px;"></p>
+	   <p><pre class="article"><b><font size="4">{{project.title}}</font></b></pre></p>
+	
+	  <p><pre class="article"><font size="2">{{ project.contenu[:267] }}...</font><a href={{ path("goodies_article", {'id': project.id}) }} value="Envoyer"> Lire l'article</a></pre></p>
 		</div>
-		
-		
+		</br>
+		 {% endfor %}
 	</body>
 </html>

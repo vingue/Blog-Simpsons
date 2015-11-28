@@ -1,21 +1,6 @@
 oc_platform_homepage:
     path:     /hello/{name}
     defaults: { _controller: OCPlatformBundle:Default:index }
-projet_ajout:
-    path:     /projet/ajout
-    defaults: { _controller: OCPlatformBundle:Projet:ajout }
-projet_afficher:
-    path:     /projet/affiche/{name}
-    defaults: { _controller: OCPlatformBundle:Projet:affiche }
-projet_modif:
-    path:     /projet/modif/{name}
-    defaults: { _controller: OCPlatformBundle:Projet:modif }
-projet_supp:
-    path:     /projet/supp/{name}
-    defaults: { _controller: OCPlatformBundle:Projet:supp }
-projet_afficheList:
-    path:     /projet/afficher
-    defaults: { _controller: OCPlatformBundle:Simpson:listAffiche }
 simpson_acceuil:
     path:     /
     defaults: { _controller: OCPlatformBundle:Simpson:affiche }

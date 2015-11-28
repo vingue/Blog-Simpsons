@@ -28,10 +28,10 @@ public function articleAction($id)
 		
 		$contenu = $ent->getContenu();
 		
-		$url = "/symfony/web/images/upload/".$ent->getPhoto(); //Donne chemin ou chercher l'image + son nom
+		$url = $ent->getPhoto(); //Donne chemin ou chercher l'image + son nom
 		
 		
-		return $this->render('OCPlatformBundle:Saviezvous:article.html.twig', array('title' => $titre,'contenu' => $contenu, 'lien' => $url));
+		return $this->render('OCPlatformBundle:Saviezvous:article.html.twig', array('title' => $titre,'contenu' => $contenu, 'lien' => $url, 'id' => $id));
 		
 		
 
@@ -171,7 +171,7 @@ public function articleAction($id)
 	public function afficheListAction()
 	{
 		$ent = $this->getDoctrine()->getRepository('OCPlatformBundle:Saviezvous')->findAll();
-		return $this->render('OCPlatformBundle:Saviezvous:projet_affiche_tous.html.twig', array('projects' => $ent));
+		return $this->render('OCPlatformBundle:Saviezvous:liste.html.twig', array('projects' => $ent));
 		exit;
 
 	}

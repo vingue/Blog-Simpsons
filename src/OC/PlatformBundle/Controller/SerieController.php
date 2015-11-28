@@ -18,11 +18,11 @@ public function articleAction()
 		
 		$contenu = $ent->getContenu();
 		
-		$url1 = "/symfony/web/images/upload/".$ent->getPhoto1(); //Donne chemin ou chercher l'image + son nom
+		$url1 = $ent->getPhoto1(); //Donne chemin ou chercher l'image + son nom
 		
-		$url2 = "/symfony/web/images/upload/".$ent->getPhoto2(); //Donne chemin ou chercher l'image + son nom
+		$url2 = $ent->getPhoto2(); //Donne chemin ou chercher l'image + son nom
 		
-		$url3 = "/symfony/web/images/upload/".$ent->getPhoto3(); //Donne chemin ou chercher l'image + son nom
+		$url3 = $ent->getPhoto3(); //Donne chemin ou chercher l'image + son nom
 		
 		
 		return $this->render('OCPlatformBundle:Serie:article.html.twig', array('contenu' => $contenu, 'lien1' => $url1, 'lien2' => $url2, 'lien3' => $url3));
