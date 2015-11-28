@@ -1,0 +1,63 @@
+body{
+
+ color:red;
+
+
+
+
+}
+
+
+img {
+    
+	opacity:0.3;
+	
+}
+#titre{
+	
+	width:100%;
+	
+}
+#arriere{
+	
+	width:100%;
+	height:100%;
+	
+	
+}
+img.png{
+	opacity:1;
+    filter:opacity(1) drop-shadow(2px 2px 2px black);
+	
+}
+
+.tabs-outer {
+position: fixed;
+top: 0;
+width: 100%;
+left: 0;
+z-index: 9999;
+}
+
+.region-inner.tabs-inner {
+padding: 0;
+}
+
+#crosscol {
+margin: 0;
+}
+
+.main-outer {
+border-top: $(main.border.width) solid $(body.rule.color);
+margin-top: 40px;   /* Espace en-dessous du titre du blog */
+}
+
+.content-inner {
+padding: $(content.padding) $(content.padding.horizontal);
+margin-top: 80px;   /* Espace au-dessus du titre du blog */
+}
+
+
+
+
+

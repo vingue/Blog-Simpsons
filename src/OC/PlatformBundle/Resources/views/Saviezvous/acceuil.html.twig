@@ -1,0 +1,147 @@
+﻿<! DOCTYPE html>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+         
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/acceuil.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+		$(document).ready(function() {
+			// grab the initial top offset of the navigation 
+		   	var stickyNavTop = $('.nav').offset().top;
+			stickyNavTop = 110;
+			console.log(stickyNavTop);
+		   	
+		   	// our function that decides weather the navigation bar should have "fixed" css position or not.
+		   	var stickyNav = function(){
+			    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+			         
+			    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+			    // otherwise change it back to relative
+			    if (scrollTop > stickyNavTop) { 
+			        $('.nav').addClass('sticky');
+			    } else {
+			        $('.nav').removeClass('sticky'); 
+			    }
+			};
+
+			stickyNav();
+			// and run it again every time you scroll
+			$(window).scroll(function() {
+				stickyNav();
+			});
+		});
+	</script>
+	
+   <title>The Simpsons</title>
+
+<body>
+	<div>
+		<div id="arriere">
+		<img class='scroll' src="/symfony/web/images/back2.jpg" alt="" style="position: absolute;" />
+		</div>
+		<img class='png' id="titre" src="/symfony/web/images/simp.png" alt="" style="position: relative; top: 5px; left: 0;"> 
+   
+	</div>
+		
+		<nav class="navbar navbar-default">
+<div class="nav sticky" id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+</nav>
+	
+
+								<br></br>
+								<br></br>
+								<br></br>
+						 
+        
+
+	<div class="container">
+            
+		<div class="main">
+        
+			<div class="view view-sixth fill">
+				<img src="/symfony/web/images/serie2.png" />
+					<div class="mask">
+						<h2 class="titre">Serie
+						</h2>
+					</div>
+			</div>
+			
+			<div class="view view-sixth fill">
+				<img src="/symfony/web/images/perso.png" />
+					<div class="mask">
+						<h2 class="titre">Personnages
+						</h2>
+					</div>
+			</div>
+			
+			<div class="view view-sixth filli">
+				<img src="/symfony/web/images/episode.png" />
+					<div class="mask">
+						<h2 class="titre">Saisons
+						</h2>
+					</div>
+			</div>
+			
+			<div class="view view-sixth filli">
+				<img src="/symfony/web/images/quote.png" />
+					<div class="mask">
+						<h2 class="titre">Citations cultes
+						</h2>
+					</div>
+			</div>
+			
+			
+			<div class="view view-sixth fill">
+				<img src="/symfony/web/images/anec.png" />
+					<div class="mask">
+						<h2 class="titre">Le saviez-vous ? 
+						</h2>
+					</div>
+			</div>
+			
+			
+			<div class="view view-sixth filli">
+				<img src="/symfony/web/images/good.png"/></a>
+					<div class="mask">
+					
+						<a href="formulaire" style="text-decoration:none"><h2 class="titre">Noël is coming !
+						</h2>
+						</a>
+					</div>
+			</div>
+				
+				
+                
+                
+		</div>
+	</div>
+
+</body>
+
+</html>

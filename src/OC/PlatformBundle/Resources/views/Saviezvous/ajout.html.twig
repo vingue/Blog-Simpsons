@@ -1,0 +1,54 @@
+
+{# src/OC/PlatformBundle/Resources/views/Default/acceuil.html.twig #}
+
+<TITLE>Paritek</TITLE>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+         
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/acceuil.css">
+</head>
+	<body>
+		
+		<div>
+			<div id="arriere">
+				<img class='scroll' src="/symfony/web/images/back2.jpg" alt="" style="position: absolute;" />
+			</div>
+			<img class='png' id="titre" src="/symfony/web/images/simp.png" alt="" style="position: relative; top: 5px; left: 0;"> 
+   
+		</div>
+	
+		<div id="cont-form" style="position:relative">
+		<form method="post" action="{{ path("saviez-vous_ajout")}}" enctype="multipart/form-data">
+			<div class="form-group">
+				<label>Titre</label>
+					<input type="text" name="title" class="form-control" id="titreform" >
+				</div>
+ 
+			<div class="form-group">
+				<label>Contenu</label>
+					<textarea type="text" name="contenu" class="form-control" id="contenu"></textarea>
+			</div>
+			
+			<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+			<label>Quelle image pour illustrer votre projet</label>? <br/><input type="file" name="fichier" id="fichier" />
+			<br/>
+ 
+			
+		
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Check me out
+				</label>
+			</div>
+			
+			<input type="submit" value="Envoyer" />
+		</form>
+		</div>
+		
+		
+	</body>
+</html>

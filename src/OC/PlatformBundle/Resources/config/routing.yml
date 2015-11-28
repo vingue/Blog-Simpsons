@@ -1,0 +1,90 @@
+oc_platform_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: OCPlatformBundle:Default:index }
+projet_ajout:
+    path:     /projet/ajout
+    defaults: { _controller: OCPlatformBundle:Projet:ajout }
+projet_afficher:
+    path:     /projet/affiche/{name}
+    defaults: { _controller: OCPlatformBundle:Projet:affiche }
+projet_modif:
+    path:     /projet/modif/{name}
+    defaults: { _controller: OCPlatformBundle:Projet:modif }
+projet_supp:
+    path:     /projet/supp/{name}
+    defaults: { _controller: OCPlatformBundle:Projet:supp }
+projet_afficheList:
+    path:     /projet/afficher
+    defaults: { _controller: OCPlatformBundle:Simpson:listAffiche }
+simpson_acceuil:
+    path:     /
+    defaults: { _controller: OCPlatformBundle:Simpson:affiche }
+formulaire_ajout:
+    path:     /formulaire
+    defaults: { _controller: OCPlatformBundle:Simpson:formulaire }
+article_ajout:
+    path:     /article
+    defaults: { _controller: OCPlatformBundle:Simpson:ajout }
+article_affiche:
+    path:     /article/{id}
+    defaults: { _controller: OCPlatformBundle:Simpson:article }
+formulaire_modif:
+    path:     /modif/{id}
+    defaults: { _controller: OCPlatformBundle:Simpson:InitModifier }
+article_modif:
+    path:     /article/modif/{id}
+    defaults: { _controller: OCPlatformBundle:Simpson:Modifier }
+article_supp:
+    path:     /article/supp/{id}
+    defaults: { _controller: OCPlatformBundle:Simpson:supprimer }
+saviez-vous_form:
+    path:     /saviez-vous/formulaire
+    defaults: { _controller: OCPlatformBundle:SaviezVous:formulaire }
+saviez-vous_ajout:
+    path:     /saviez-vous/article
+    defaults: { _controller: OCPlatformBundle:SaviezVous:ajout }
+saviez-vous_article:
+    path:     /saviez-vous/article/{id}
+    defaults: { _controller: OCPlatformBundle:SaviezVous:article }
+saviez-vous_form_modif:
+    path:     /saviez-vous/modif/{id}
+    defaults: { _controller: OCPlatformBundle:SaviezVous:InitModifier }
+saviez-vous_modif:
+    path:     /saviez-vous/article/modif/{id}
+    defaults: { _controller: OCPlatformBundle:SaviezVous:Modifier }
+saviez-vous_supp:
+    path:     /saviez-vous/article/supp/{id}
+    defaults: { _controller: OCPlatformBundle:SaviezVous:supprimer }
+saviez-vous_list:
+    path:     /saviez-vous/liste
+    defaults: { _controller: OCPlatformBundle:SaviezVous:afficheList }
+goodies_form:
+    path:     /goodies/formulaire
+    defaults: { _controller: OCPlatformBundle:Goodies:formulaire }
+goodies_ajout:
+    path:     /goodies/article
+    defaults: { _controller: OCPlatformBundle:Goodies:ajout }
+goodies_article:
+    path:     /goodies/article/{id}
+    defaults: { _controller: OCPlatformBundle:Goodies:article }
+goodies_form_modif:
+    path:     /goodies/modif/{id}
+    defaults: { _controller: OCPlatformBundle:Goodies:InitModifier }
+goodies_modif:
+    path:     /goodies/article/modif/{id}
+    defaults: { _controller: OCPlatformBundle:Goodies:Modifier }
+goodies_supp:
+    path:     /goodies/article/supp/{id}
+    defaults: { _controller: OCPlatformBundle:Goodies:supprimer }
+goodies_list:
+    path:     /goodies/liste
+    defaults: { _controller: OCPlatformBundle:Goodies:afficheList }
+serie_article:
+    path:     /serie
+    defaults: { _controller: OCPlatformBundle:Serie:article }
+serie_form_modif:
+    path:     /serie/modif
+    defaults: { _controller: OCPlatformBundle:Serie:InitModifier }
+serie_modif:
+    path:     /serie/article/modif
+    defaults: { _controller: OCPlatformBundle:Serie:Modifier }

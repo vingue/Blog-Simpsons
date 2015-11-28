@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<TITLE>Paritek</TITLE>
+<html>
+	<body>
+		<form method="post" action="{{ path("projet_ajoutUser")}}" enctype="multipart/form-data">
+			<label>Le titre de votre projet</label> : <br/> <input type="text" name="title" id="title" />
+			<br/>
+			<label>Le type de votre projet</label> : <br/> <input type="text" name="type" id="type" />
+			<br/>
+			<label>Quel type de poseur êtes-vous?</label>  <br/><input type="text" name="poseur" id="poseur" />
+			<br/>
+			<label>Quel est la catégorie de votre projet</label>? <br/><input type="text" name="categorie" id="categorie" />
+			<br/>
+			<label>Décrivez votre projet</label> : <br/><textarea name="summary" id="summary" rows="5" cols="30"></textarea>
+			<br/>
+			<label>Quel est le budget de votre projet</label>? <br/><input type="number" name="budget" id="budget" />
+			<br/>
+			<input type="hidden" name="MAX_FILE_SIZE" value="100000">
+			<label>Quelle image pour illustrer votre projet</label>? <br/><input type="file" name="fichier" id="fichier" />
+			<br/>
+			<br/><br/>
+			<input type="submit" value="Envoyer" name="submit" />
+		</form>
+		
+		
+	</body>
+</html>

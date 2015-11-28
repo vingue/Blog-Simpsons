@@ -1,0 +1,24 @@
+ <html>
+ <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+         
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/symfony/web/css/acceuil.css">
+</head>
+	<body>
+		 {% for project in projects %}
+		 <div id="cont-form-intern">
+			<h4>{{ project.title }}</h4>
+			<p>{{ project.contenu }}</p>
+			<form method="post" action="{{ path("goodies_form_modif",{'id': project.id})}}" enctype="multipart/form-data">
+				<input type="submit" value="Modifier" />
+			</form>
+			<form method="post" action="{{ path("goodies_supp",{'id': project.id})}}" enctype="multipart/form-data">
+				<input type="submit" value="Supprimer" />
+			</form>
+		</div>
+		</br>
+		 {% endfor %}
+	</body>
+</html>
