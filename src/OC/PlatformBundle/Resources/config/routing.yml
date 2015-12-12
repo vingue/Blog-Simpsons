@@ -1,27 +1,66 @@
-oc_platform_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: OCPlatformBundle:Default:index }
 simpson_acceuil:
     path:     /
-    defaults: { _controller: OCPlatformBundle:Simpson:affiche }
-formulaire_ajout:
-    path:     /formulaire
-    defaults: { _controller: OCPlatformBundle:Simpson:formulaire }
-article_ajout:
-    path:     /article
-    defaults: { _controller: OCPlatformBundle:Simpson:ajout }
-article_affiche:
-    path:     /article/{id}
-    defaults: { _controller: OCPlatformBundle:Simpson:article }
-formulaire_modif:
-    path:     /modif/{id}
-    defaults: { _controller: OCPlatformBundle:Simpson:InitModifier }
-article_modif:
-    path:     /article/modif/{id}
-    defaults: { _controller: OCPlatformBundle:Simpson:Modifier }
-article_supp:
-    path:     /article/supp/{id}
-    defaults: { _controller: OCPlatformBundle:Simpson:supprimer }
+    defaults: { _controller: OCPlatformBundle:Simpson:affiche }	
+ajoute_citation:
+    path:     /citations/ajout
+    defaults: { _controller: OCPlatformBundle:Quote:fillQuote }
+affiche_citation:
+    path:     /citations/affiche
+    defaults: { _controller: OCPlatformBundle:Quote:showQuote }
+affiche_quote:
+    path:     /citations
+    defaults: { _controller: OCPlatformBundle:Quote:quote }
+supprim_citation: 
+    path:     /citations/supprim/{id}
+    defaults: { _controller: OCPlatformBundle:Quote:supprimer}
+ajoute_perso:
+    path:     /personnages/ajout
+    defaults: { _controller: OCPlatformBundle:Perso:fillPerso }
+affiche_perso:
+    path:     /personnages/affiche
+    defaults: { _controller: OCPlatformBundle:Perso:showPerso }
+article_perso:
+    path:     /personnages/article/{id}
+    defaults: { _controller: OCPlatformBundle:Perso:perso }
+acceuil_perso:
+    path:     /personnages
+    defaults: { _controller: OCPlatformBundle:Perso:acceuilPerso }
+affiche_perso_list: 
+    path:     /personnages/liste/{numero}
+    defaults: { _controller: OCPlatformBundle:Perso:persoList}
+formulaire_modif: 
+    path:     /personnages/modif/{id}
+    defaults: { _controller: OCPlatformBundle:Perso:initModifPerso}
+enregistre_modif: 
+    path:     /personnages/enregistre/{id}
+    defaults: { _controller: OCPlatformBundle:Perso:modifPerso}
+supprim_perso: 
+    path:     /personnage/supprim/{id}
+    defaults: { _controller: OCPlatformBundle:Perso:supprimer}
+ajoute_saison:
+    path:     /saisons/ajout
+    defaults: { _controller: OCPlatformBundle:Saison:fillSaison }
+affiche_saison:
+    path:     /saisons/affiche
+    defaults: { _controller: OCPlatformBundle:Saison:showSaison }
+article_saison:
+    path:     /saison/episode/{id}
+    defaults: { _controller: OCPlatformBundle:Saison:saison }
+acceuil_saison:
+    path:     /saisons
+    defaults: { _controller: OCPlatformBundle:Saison:acceuilSaison }
+affiche_saison_num: 
+    path:     /saison/{numero}
+    defaults: { _controller: OCPlatformBundle:Saison:saisonX}
+formulaire_modif_saison: 
+    path:     /saisons/modif/{id}
+    defaults: { _controller: OCPlatformBundle:Saison:initModifsaison}
+enregistre_modif_saison: 
+    path:     /saisons/enregistre/{id}
+    defaults: { _controller: OCPlatformBundle:Saison:modifSaison}
+supprim_saison: 
+    path:     /saisons/supprim/{id}
+    defaults: { _controller: OCPlatformBundle:Saison:supprimer}
 saviez-vous_form:
     path:     /saviez-vous/formulaire
     defaults: { _controller: OCPlatformBundle:SaviezVous:formulaire }

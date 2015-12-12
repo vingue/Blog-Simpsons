@@ -1,6 +1,8 @@
-﻿<! DOCTYPE html>
+
+{# src/OC/PlatformBundle/Resources/views/Default/acceuil.html.twig #}
 
 <html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
          
@@ -115,76 +117,46 @@
 </ul>
 </div>
 </nav>
-	
 
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
+<div id="formulaire" style="position:relative">
+		<form method="post" action="{{ path("affiche_perso")}}" enctype="multipart/form-data" >
+			<div class="form-group">
+				<label>Titre de l'article</label>
+					<input type="text" name="titre" class="form-control" id="title">
+				</div>
+ 
+			<div class="form-group">
+				<label>Votre texte</label>
+					<textarea type="text" name="contenu" class="form-control" id="contenu"></textarea>
+			</div>
+			
+			<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+			<label>Quelle image pour illustrer votre projet ?</label><br/><input type="file" name="fichier" id="fichier" />
+			<br>
+              
+			
 
-	<div class="container-home">
-            
-		<div class="main">
-        
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
-					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
-						</h2>
-						</a>
-					</div>
-			</div>
-				
-				
-                
-                
+  <!---<form class="form-horizontal" role="form"> --->
+  
+
+
+      <div style="width:27%;" >
+        <select class="selectpicker form-control dropup top" name="num">
+		<option style="display: none" selected disabled>Type du personnage ?</option>
+          <option  value="1" >Principaux</option>
+          <option  value="2" >Secondaires</option>
+          <option value="3" >Guest</option>
+          
+        </select>
+      </div>
+ 
+ 
+<br>
+<br>
+  
+			<input type="submit" value="Envoyer" />
+		</form>
 		</div>
-	</div>
-
-</body>
-
+		
+	</body>
 </html>

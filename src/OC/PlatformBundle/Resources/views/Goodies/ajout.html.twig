@@ -1,7 +1,7 @@
 
 {# src/OC/PlatformBundle/Resources/views/Default/acceuil.html.twig #}
 
-<TITLE>Paritek</TITLE>
+
 
 <html>
 <head>
@@ -41,7 +41,8 @@
 	</script>
 	
    <title>The Simpsons</title>
-	<body>
+
+<body>
 	<div>
 		<div id="arriere">
 		<img class='scroll' src="/symfony/web/images/back2.jpg" alt="" style="position: absolute;" />
@@ -50,66 +51,69 @@
    
 	</div>
 		
-		<nav class="navbar navbar-default">
+				
+<nav class="navbar navbar-default">
 <div class="nav sticky" id='cssmenu'>
 <ul>
    <li><a href={{ path("simpson_acceuil") }}><span>Acceuil</span></a></li>
    <li><a href={{ path("serie_article") }}><span>La série</span></a></li>
-   <li class='active has-sub'><a href='#'><span>Personnages</span></a>
+   <li class='active has-sub'><a href={{ path("acceuil_perso") }}><span>Personnages</span></a>
       <ul>
-         <li class='has-sub'><a href='#'><span>Principaux</span></a>
+         <li class='has-sub'><a href={{ path('affiche_perso_list', {'numero': 1}) }}><span>Principaux</span></a>
          </li>
-         <li class='has-sub'><a href='#'><span>Secondaire</span></a>
+         <li class='has-sub'><a href={{ path('affiche_perso_list', {'numero': 2}) }}><span>Secondaire</span></a>
          </li>
-		 <li class='has-sub'><a href='#'><span>Guest</span></a>
+		 <li class='has-sub'><a href={{ path('affiche_perso_list', {'numero': 3}) }}><span>Guest</span></a>
          </li>
       </ul>
    </li>
-   <li class='active has-sub'><a href='#'><span>Saisons</span></a>
+   <li class='active has-sub'><a href={{ path("acceuil_saison") }}><span>Saisons</span></a>
       <ul>
-		<li class='has-sub'><a href='#'><span>Saison 1-10</span></a>
+		<li class='has-sub'><a><span>Saison 1-10</span></a>
             <ul>
-				<li><a href='#'><span>Saison 1</span></a></li>
-				<li><a href='#'><span>Saison 2</span></a></li>
-				<li><a href='#'><span>Saison 3</span></a></li>
-				<li><a href='#'><span>Saison 4</span></a></li>
-				<li><a href='#'><span>Saison 5</span></a></li>
-				<li><a href='#'><span>Saison 6</span></a></li>
-				<li><a href='#'><span>Saison 7</span></a></li>
-				<li><a href='#'><span>Saison 8</span></a></li>
-				<li><a href='#'><span>Saison 9</span></a></li>
-				<li class='last'><a href='#'><span>Saison 10</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 1}) }}><span>Saison 1</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 2}) }}><span>Saison 2</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 3}) }}><span>Saison 3</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 4}) }}><span>Saison 4</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 5}) }}><span>Saison 5</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 6}) }}><span>Saison 6</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 7}) }}><span>Saison 7</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 8}) }}><span>Saison 8</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 9}) }}><span>Saison 9</span></a></li>
+			<li class='last'><a href={{ path('affiche_saison_num', {'numero': 10}) }}><span>Saison 10</span></a></li>
 			</ul>
          </li>
-		 <li class='has-sub'><a href='#'><span>Saison 11-20</span></a>
+		 <li class='has-sub'><a><span>Saison 11-20</span></a>
             <ul>
-				<li><a href='#'><span>Saison 11</span></a></li>
-				<li><a href='#'><span>Saison 12</span></a></li>
-				<li><a href='#'><span>Saison 13</span></a></li>
-				<li><a href='#'><span>Saison 14</span></a></li>
-				<li><a href='#'><span>Saison 15</span></a></li>
-				<li><a href='#'><span>Saison 16</span></a></li>
-				<li><a href='#'><span>Saison 17</span></a></li>
-				<li><a href='#'><span>Saison 18</span></a></li>
-				<li><a href='#'><span>Saison 19</span></a></li>
-				<li class='last'><a href='#'><span>Saison 20</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 11}) }}><span>Saison 11</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 12}) }}><span>Saison 12</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 13}) }}><span>Saison 13</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 14}) }}><span>Saison 14</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 15}) }}><span>Saison 15</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 16}) }}><span>Saison 16</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 17}) }}><span>Saison 17</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 18}) }}><span>Saison 18</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 19}) }}><span>Saison 19</span></a></li>
+			<li class='last'><a href={{ path('affiche_saison_num', {'numero': 20}) }}><span>Saison 20</span></a></li>
+				
 			</ul>
          </li>
-		 <li class='has-sub'><a href='#'><span>Saison 21-28</span></a>
+		 <li class='has-sub'><a><span>Saison 21-28</span></a>
             <ul>
-				<li><a href='#'><span>Saison 21</span></a></li>
-				<li><a href='#'><span>Saison 22</span></a></li>
-				<li><a href='#'><span>Saison 23</span></a></li>
-				<li><a href='#'><span>Saison 24</span></a></li>
-				<li><a href='#'><span>Saison 25</span></a></li>
-				<li><a href='#'><span>Saison 26</span></a></li>
-				<li><a href='#'><span>Saison 27</span></a></li>
-				<li class='last'><a href='#'><span>Saison 28</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 21}) }}><span>Saison 21</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 22}) }}><span>Saison 22</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 23}) }}><span>Saison 23</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 24}) }}><span>Saison 24</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 25}) }}><span>Saison 25</span></a></li>
+				<li><a href={{ path('affiche_saison_num', {'numero': 26}) }}><span>Saison 26</span></a></li>
+			<li><a href={{ path('affiche_saison_num', {'numero': 27}) }}><span>Saison 27</span></a></li>
+				<li class='last'><a href={{ path('affiche_saison_num', {'numero': 28}) }}><span>Saison 28</span></a></li>
+			
 			</ul>
          </li>
       </ul>
    </li>
-   <li><a href='#'><span>Citations</span></a></li>
+   <li><a href={{ path("affiche_quote") }}><span>Citations</span></a></li>
    <li><a href={{ path("saviez-vous_list") }}><span>Le saviez-vous?</span></a></li>
    <li class='last'><a href={{ path("goodies_list") }}><span>Goodies</span></a></li>
 </ul>
@@ -120,7 +124,7 @@
 		<form method="post" action="{{ path("goodies_ajout")}}" enctype="multipart/form-data">
 			<div class="form-group">
 				<label>Titre</label>
-					<input type="text" name="title" class="form-control" id="titreform" >
+					<input type="text" name="title" class="form-control" id="title" >
 				</div>
  
 			<div class="form-group">
@@ -129,7 +133,7 @@
 			</div>
 			
 			<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
-			<label>Quelle image pour illustrer votre article</label>? <br/><input type="file" name="fichier" id="fichier" />
+			<label>Quelle image pour illustrer votre article ?</label><br/><input type="file" name="fichier" id="fichier" />
 			<br/>
 
 			<input type="submit" value="Envoyer" />

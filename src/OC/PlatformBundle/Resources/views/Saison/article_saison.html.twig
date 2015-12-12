@@ -1,4 +1,4 @@
-﻿<! DOCTYPE html>
+
 
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,75 +116,27 @@
 </div>
 </nav>
 	
-
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
-
-	<div class="container-home">
-            
-		<div class="main">
-        
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
+   <div id="cont-article" style="position:relative">
 			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
-					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
-						</h2>
-						</a>
-					</div>
-			</div>
-				
-				
-                
-                
+	
+      
+	  <pre class="titre" style="text-align:center"><b><font face="Comic sans MS" size="6">{{title}}</font></b></pre>
+	  
+	  <p align="center"><img class="article"  alt="" src ="{{ asset('images/upload/' ~ lien) }}"></p>
+	    <pre class="article"><font size="3">{{contenu}}</font></pre>
+	   <form method="post" enctype="multipart/form-data" >
+	 
+				<div style="margin-left:77%;">
+			<a href={{path("formulaire_modif_saison",{'id': id})}}	type="submit" class="btn btn-success"> Modifier  <span class="glyphicon glyphicon-pencil"></span></a>
+		<a href={{path("supprim_saison",{'id': id})}} class="btn btn-danger"> Supprimer  <span class="glyphicon glyphicon-trash"></span></a>
+		
+		</form>
 		</div>
-	</div>
-
+	  
+	 
+	
+</div>
+				
 </body>
 
 </html>

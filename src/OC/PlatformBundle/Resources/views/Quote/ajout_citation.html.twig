@@ -1,6 +1,9 @@
-﻿<! DOCTYPE html>
+
+{# src/OC/PlatformBundle/Resources/views/Default/acceuil.html.twig #}
+
 
 <html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
          
@@ -115,76 +118,29 @@
 </ul>
 </div>
 </nav>
-	
 
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
-
-	<div class="container-home">
-            
-		<div class="main">
-        
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
+<div id="formulaire" style="position:relative">
+		<form method="post" action="{{ path("affiche_citation")}}" enctype="multipart/form-data" >
+			<div class="form-group">
+				<label>Citation</label>
+					<input type="text" name="citation" class="form-control" id="title">
+				</div>
+ 
+			<div class="form-group">
+				<label>Auteur</label>
+					<input type="text" name="personnage" class="form-control" id="title">
+				</div>
 			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
+			<div class="form-group">
+				<label>Saison/Episode</label>
+					<input type="text" name="source" class="form-control" id="title">
+				</div>
+ 
 			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
-					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
-						</h2>
-						</a>
-					</div>
-			</div>
-				
-				
-                
-                
+			<br>
+			<input type="submit" value="Envoyer" />
+		</form>
 		</div>
-	</div>
-
-</body>
-
+		
+	</body>
 </html>

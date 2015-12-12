@@ -1,4 +1,4 @@
-﻿<! DOCTYPE html>
+<! DOCTYPE html>
 
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,63 +117,36 @@
 </nav>
 	
 
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
+		
 
-	<div class="container-home">
+	<div class="container">
             
-		<div class="main">
+		<div class="main_perso">
         
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
 			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
+			<div class="view_perso view-sixth_perso">
+				<img src="/symfony/web/images/personnage.png" />
+					<div class="mask_perso">
+						<a href={{ path('affiche_perso_list', {'numero': 1}) }} style="text-decoration:none"><h2 class="titre">Principaux
 						</h2>
 					</div>
 			</div>
 			
 			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
+			<div class="view_perso view-sixth_perso">
+				<img src="/symfony/web/images/personnage.png" />
+					<div class="mask_perso">
+						<a href={{ path('affiche_perso_list', {'numero': 2}) }} style="text-decoration:none"><h2 class="titre">Secondaires
 						</h2>
 					</div>
 			</div>
 			
 			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
+			<div class="view_perso view-sixth_perso">
+				<img src="/symfony/web/images/personnage.png"/></a>
+					<div class="mask_perso">
 					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
+						<a href={{ path('affiche_perso_list', {'numero': 3}) }} style="text-decoration:none"><h2 class="titre">Guests
 						</h2>
 						</a>
 					</div>

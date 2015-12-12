@@ -1,4 +1,4 @@
-﻿<! DOCTYPE html>
+
 
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,75 +116,40 @@
 </div>
 </nav>
 	
-
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
-
-	<div class="container-home">
-            
-		<div class="main">
-        
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
+   <div id="cont-liste" style="position:relative">
 			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
-					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
-						</h2>
-						</a>
-					</div>
-			</div>
-				
-				
-                
-                
+		 <div style="margin-left:75%; margin-top:1%;">
+    <form method="post" enctype="multipart/form-data" >
+			<a href={{ path("ajoute_perso")}} class="btn btn-default-ajouter"><span class="glyphicon glyphicon-plus"></span> Ajouter un personnage</a>
+		</form>
 		</div>
-	</div>
+	{% for perso in titre %} 
+      
+{% if numero == perso.numero %}
 
+		
+	<div style="background:transparent;" class="cont-photo-liste">
+ <p style="float: left;"><img alt="" src ="{{ asset('images/upload/' ~ perso.photo) }}" style="width:250px;
+height:200px; border-bottom-left-radius:15px; border-top-left-radius:15px;"></p>
+	   <p><pre class="article"><b><font size="4">{{perso.titre}}</font></b></pre></p>
+	
+	  <p><pre class="article"><font size="2">{{ perso.contenu[:267] }}...</font><a href={{ path("article_perso", {'id': perso.id}) }} value="Envoyer"> Lire l'article</a></pre></p>
+	  
+	  
+	 </div>
+	 
+			
+			
+		
+{% endif %}
+	{% endfor %}
+	
+
+
+	
+	
+</div>
+				
 </body>
 
 </html>

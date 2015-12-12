@@ -1,4 +1,4 @@
-﻿<! DOCTYPE html>
+
 
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,75 +116,28 @@
 </div>
 </nav>
 	
-
-								<br></br>
-								<br></br>
-								<br></br>
-						 
-        
-
-	<div class="container-home">
-            
-		<div class="main">
-        
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/serie2.png" />
-					<div class="mask">
-						<a href="serie" style="text-decoration:none"><h2 class="titre">Serie
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/perso.png" />
-					<div class="mask">
-						<a href="personnages" style="text-decoration:none"><h2 class="titre">Personnages
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-mot">
-				<img src="/symfony/web/images/episode.png" />
-					<div class="mask">
-						<a href="saisons" style="text-decoration:none"><h2 class="titre">Saisons
-						</h2>
-					</div>
-			</div>
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/quote.png" />
-					<div class="mask">
-						<a href="citations" style="text-decoration:none"><h2 class="titre">Citations cultes
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/anec.png" />
-					<div class="mask">
-						<a href="saviez-vous/liste" style="text-decoration:none"><h2 class="titre">Le saviez-vous ? 
-						</h2>
-					</div>
-			</div>
-			
-			
-			<div class="view view-sixth-phrase">
-				<img src="/symfony/web/images/good.png"/></a>
-					<div class="mask">
-					
-						<a href="goodies/liste" style="text-decoration:none"><h2 class="titre">Noël is coming !
-						</h2>
-						</a>
-					</div>
-			</div>
-				
-				
-                
-                
+   <div id="cont-citation" style="position:relative">
+		 <div style="margin-left:82%; padding-bottom:15px;">
+    <form method="post" enctype="multipart/form-data" >
+			<a href={{ path("ajoute_citation")}} class="btn btn-default-ajouter"><span class="glyphicon glyphicon-plus"></span> Ajouter une citation</a>
+		</form>
 		</div>
-	</div>
-
+			
+	{% for cite in citation %} 
+	
+	<pre  class="top-quote">"{{ cite.citation }}" -<i>{{ cite.personnage }}</i><br>{{ cite.source }}</pre>
+	<form method="post" enctype="multipart/form-data" >
+	 
+				<div style="margin-left:88%" >
+			
+		<a href={{path("supprim_citation",{'id': cite.id})}} class="btn btn-danger"> Supprimer  <span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+		</form>
+		<br>
+	{% endfor %}
+	            
+</div>
+				
 </body>
 
 </html>
